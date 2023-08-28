@@ -1,26 +1,54 @@
+@font-face {
+  font-family: "Bungee Shade";
+  src: local("Bungee Shade"), url("BungeeShade-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  src: local("Lato"), url("Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "LatoItalic";
+  src: local("Lato-Italic"), url("Lato-Italic.ttf") format("truetype");
+}
+
 :root {
-    --r-link-color: rgb(37, 186, 146);
-    --r-background-color: rgb(18, 18, 18);
-    --r-heading-color: rgba(255, 255, 255, 0.97);
-    --r-main-color: rgba(255, 255, 255, 0.87);
+  font-family: "Lato", sans-serif;
 }
 
-.reveal strong, .reveal b {
-    color: var(--r-link-color);
+h1,
+h2,
+h3 {
+  font-family: "Bungee Shade", Impact, sans-serif;
+  text-transform: uppercase;
 }
 
-.reveal-viewport {
-    background-image: url(./zane-lee-nRiRAGqnpl0-unsplash.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+h1 {
+  width: 70%;
 }
 
-.reveal-viewport::after {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(18, 18, 14, 0.70);
-    content: "";
+p,
+li {
+  margin: 0.5em auto;
+}
+
+.i {
+  font-family: "LatoItalic", sans-serif;
+}
+
+main {
+  background-image: url(./zane-lee-nRiRAGqnpl0-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(18, 18, 14, 0.7);
+  content: "";
 }
