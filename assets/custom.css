@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "Bungee Shade";
-  src: local("Bungee Shade"), url("BungeeShade-Regular.ttf") format("truetype");
-}
-
-@font-face {
   font-family: "Lato";
   src: local("Lato"), url("Lato-Regular.ttf") format("truetype");
 }
@@ -13,14 +8,24 @@
   src: local("Lato-Italic"), url("Lato-Italic.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "LatoBold";
+  src: local("Lato-Bold"), url("Lato-Bold.ttf") format("truetype");
+}
+
 :root {
   font-family: "Lato", sans-serif;
+
+  --sd-background-color: #2a2342;
+  --sd-heading-color: rgba(255, 255, 255, 0.97);
+  --sd-text-color: rgba(255, 255, 255, 0.87);
+  --sd-primary-color: #de674a;
 }
 
 h1,
 h2,
 h3 {
-  font-family: "Bungee Shade", Impact, sans-serif;
+  font-family: Impact, sans-serif;
   text-transform: uppercase;
 }
 
@@ -37,13 +42,17 @@ li {
   font-family: "LatoItalic", sans-serif;
 }
 
-main {
-  background-image: url(./zane-lee-nRiRAGqnpl0-unsplash.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+.b {
+  font-family: "LatoBold", sans-serif;
 }
 
-main::before {
+.sd-app .cover {
+  background-image: url(./zane-lee-nRiRAGqnpl0-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sd-app .cover::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -51,4 +60,36 @@ main::before {
   right: 0;
   background-color: rgba(18, 18, 14, 0.7);
   content: "";
+  z-index: -1;
+}
+
+.sd-app .kody {
+  background-color: #4f5050;
+  background-image: url(./kody/kody.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 10%;
+}
+
+.sd-app .kody img {
+  border: 5px solid white;
+}
+
+.sd-app .babylon {
+  background-image: url(./babylonjs/babylonjs.png);
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 10%;
+}
+
+.sd-slide pre {
+  width: 80%;
+  border: 2px solid white;
+  font-size: 3vh;
+  position: relative;
+  margin: 20px auto;
+}
+
+.sd-slide pre code {
+  height: 100%;
 }

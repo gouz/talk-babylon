@@ -1,102 +1,39 @@
 /::
 custom_css: assets/custom.css
+custom_js: assets/custom.js
 custom_sv_js: assets/customsv.js
 ::/
+
+## .[cover]
 
 # De JavaScript à l'impression 3D
 
 __Promenons-nous dans les jardins de Babylon.js__
 
-## Pourquoi ce talk ? .[color-1]
+!include(_introduction.sdf)
 
-Plusieurs passions : Maker / Dev
+//@ < 02:00
 
-Inspiré par **@aurelievache**, **@titimoby**, **@steffy29**
+!include(_kody.sdf)
 
-## Qui sommes-nous ?
+//@ < 07:00
 
-## Aurélie Vache
+!include(_babylonjs.sdf)
 
-/*
-*/
+!include(_csg.sdf)
 
-## Sylvain Gougouzian
+//@ < 22:00
 
-gouz
+!include(_impression3D.sdf)
 
-Consultant Dev Senior
+//@ < 32:00
 
-!image(assets/zenika.svg | width="30%" alt="zenika")
+!include(_js3D.sdf)
 
-Clermont-Ferrand
+//@ < 35:00
 
-https://gouz.dev
-
-/*
-Dev, Maker
-*/
-
-## CTRL+P mais 3D
-
-### Technologies
-
-### gcode
-
-### STL, c'est pas des sous-titres ?
-
-## Constructive Solid Geometry
-
-/*
-CSG ou Géométrie de construction de solides
-*/
-
-## Babylon.js
-
-/*
-By the rivers of Babylon, there we sat down
-Yeah, we wept, when we remembered Zion
-By the rivers of Babylon, there we sat down
-Yeah, we wept, when we remembered Zion
-*/
-
-
-
-## Application : Kody
+!include(_conclusion.sdf)
 
 ## Merci
 
 des questions ?
-
-Présentations :
-- Aurélie : 30 sec
-- Sylvain : 30 sec
-Origines : Kody => 6 min (@gouz / @scraly)
-
-// 7min
-
-BabylonJS (@gouz : @scraly pose les questions)
-- Scene
-- Engine
-Conception 3D
-- Mesh
-Constructive Solid Geometry (CSG ou Géométrie de construction de solides)
-
-// 22 min
-
-Comment fonctionne une imprimante 3D ? (@scraly)
-- Diverses technologies
-- GCode
-
-// 32 min
-
-Javascript vers GCode (@gouz)
-- STL
-- Slicer
-
-// 35 min
-
-Conclusion
-
-https://kody-deck.fr
-
-discord 
