@@ -9,4 +9,4 @@ document.body.appendChild(hljs_style);
 
 setTimeout(() => {
   hljs.highlightAll();
-}, 100);
+}, 1000);

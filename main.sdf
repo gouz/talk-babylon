@@ -1,7 +1,6 @@
 /::
 custom_css: assets/custom.css
 custom_js: assets/custom.js
-custom_sv_js: assets/customsv.js
 ::/
 
 ## .[cover]
