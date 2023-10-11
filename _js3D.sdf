@@ -1,7 +1,39 @@
-## STL, c'est pas des sous-titres ?
+## STL, c'est pas des sous-titres ? .[cura]
 
 
+## text.stl .[cura]
 
-Javascript vers GCode (@gouz)
-- STL
-- Slicer
+<pre>
+<code>
+solid merged
+	facet normal 0 1 0
+		outer loop
+			vertex 28.999999995343387 1.8000000572204589 -40.507936501432035
+			vertex 31.5 1.8000000572204589 -44
+			vertex 28.999999995343387 1.8000000572204589 -44
+		endloop
+	endfacet
+	facet normal 0 1 0
+		outer loop
+			vertex 28.999999995343387 1.8000000572204589 -39.92592591833738
+			vertex 31.5 1.8000000572204589 -44
+			vertex 28.999999995343387 1.8000000572204589 -40.507936501432035
+		endloop
+	endfacet
+	...
+endsolid
+</code>
+</pre>
+
+## Un peu de JS ? .[cura]
+
+<pre>
+<code class="language-javascript">
+const rawMeshes = scene.meshes;
+let exportFile = BABYLON.STLExport.CreateSTL(
+	rawMeshes,    // list defines the mesh to serialize
+	true,         // triggers the automatic download of the file.
+	"stl-export"  // changes the downloads fileName
+);
+</code>
+</pre>

@@ -99,6 +99,23 @@ li {
   z-index: -1;
 }
 
+.sd-app .cura {
+  background-image: url(./cura.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sd-app .cura::before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(18, 18, 14, 0.7);
+  content: "";
+  z-index: -1;
+}
+
 .sd-slide pre {
   width: 80%;
   border: 2px solid white;

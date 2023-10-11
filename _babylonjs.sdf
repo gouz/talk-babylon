@@ -170,3 +170,56 @@ Un polygone est un ensemble coplanaire de faces.
 surfaces
 Plus souvent appelées groupes de lissage.
 */
+
+## Passons à la pratique .[babylon]
+
+## On crée une scène .[babylon]
+
+<pre>
+<code class="language-javascript">
+const canvas = document.getElementById(canvasId);
+const engine = new BabylonEngine(canvas, true, {
+    preserveDrawingBuffer: true,
+    stencil: true,
+});
+const scene = new BabylonScene(engine);
+scene.clearColor = BabylonColor3.FromHexString("#9fc9dc");
+</code>
+</pre>
+
+## On ajoute caméra, lumière, ... .[babylon]
+
+<pre>
+<code>
+const camera = new BabylonArcRotateCamera(
+    "camera",
+    -Math.PI / 2,
+    Math.PI / 2.5,
+    3,
+    new BabylonVector3(0, 0, -250),
+    scene
+);
+camera.setTarget(BabylonVector3.Zero());
+camera.attachControl(canvas, false);
+new BabylonHemisphericLight("light", new BabylonVector3(2, 3, 3), scene);
+new BabylonHemisphericLight("light", new BabylonVector3(2, 3, -3), scene);
+engine.runRenderLoop(() => scene.render());
+</code>
+</pre>
+
+## Construisons une "carte" de Kody .[babylon]
+
+<pre>
+<code class="language-javascript">
+const material = new BabylonStandardMaterial("std", scene);
+material.diffuseColor = BabylonColor3.FromHexString(color);
+const mesh = BabylonMeshBuilder.CreateBox("box", {
+    width,
+    height,
+    depth,
+});
+mesh.material = material;
+</code>
+</pre>
+
+## Comment je fais des trous ??? .[babylon]
