@@ -1,6 +1,38 @@
-## Constructive Solid Geometry
+## Constructive Solid Geometry .[maths]
 
 /*
 CSG ou Géométrie de construction de solides
 */
 
+3 opérations
+
+## Union ou Addition .[maths]
+
+!image(assets/maths/Boolean_union.png)
+
+## Différence ou Soustraction .[maths]
+
+!image(assets/maths/Boolean_difference.png)
+
+## Intersection .[maths]
+
+!image(assets/maths/Boolean_intersect.png)
+
+## Des p'tits trous, toujours des p'tits trous
+
+<pre>
+<code class="language-javascript">
+const hole = Babylon.MeshBuilder.CreateBox("box", {
+    width,
+    height,
+    depth,
+});
+hole.position.x = x;
+hole.position.y = y;
+hole.position.z = z;
+const CSG1 = BabylonCSG.FromMesh(card);
+const CSG2 = BabylonCSG.FromMesh(hole);
+const pipeCSG = CSG1.subtract(CSG2);
+pipeCSG.toMesh("merged", card.material, scene);
+</code>
+</pre>

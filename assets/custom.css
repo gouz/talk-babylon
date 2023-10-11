@@ -52,17 +52,6 @@ li {
   background-repeat: no-repeat;
 }
 
-.sd-app .cover::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(18, 18, 14, 0.7);
-  content: "";
-  z-index: -1;
-}
-
 .sd-app .kody {
   background-color: #4f5050;
   background-image: url(./kody/kody.png);
@@ -88,15 +77,10 @@ li {
   background-repeat: no-repeat;
 }
 
-.sd-app .print3D::before {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(18, 18, 14, 0.7);
-  content: "";
-  z-index: -1;
+.sd-app .maths {
+  background-image: url(./thomas-t-OPpCbAAKWv8-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .sd-app .cura {
@@ -105,6 +89,9 @@ li {
   background-repeat: no-repeat;
 }
 
+.sd-app .cover::before,
+.sd-app .print3D::before,
+.sd-app .maths::before,
 .sd-app .cura::before {
   position: absolute;
   top: 0;

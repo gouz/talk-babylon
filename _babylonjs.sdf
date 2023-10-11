@@ -178,12 +178,12 @@ Plus souvent appelées groupes de lissage.
 <pre>
 <code class="language-javascript">
 const canvas = document.getElementById(canvasId);
-const engine = new BabylonEngine(canvas, true, {
+const engine = new Babylon.Engine(canvas, true, {
     preserveDrawingBuffer: true,
     stencil: true,
 });
-const scene = new BabylonScene(engine);
-scene.clearColor = BabylonColor3.FromHexString("#9fc9dc");
+const scene = new Babylon.Scene(engine);
+scene.clearColor = Babylon.Color3.FromHexString("#9fc9dc");
 </code>
 </pre>
 
@@ -191,18 +191,18 @@ scene.clearColor = BabylonColor3.FromHexString("#9fc9dc");
 
 <pre>
 <code>
-const camera = new BabylonArcRotateCamera(
+const camera = new Babylon.ArcRotateCamera(
     "camera",
     -Math.PI / 2,
     Math.PI / 2.5,
     3,
-    new BabylonVector3(0, 0, -250),
+    new Babylon.Vector3(0, 0, -250),
     scene
 );
-camera.setTarget(BabylonVector3.Zero());
+camera.setTarget(Babylon.Vector3.Zero());
 camera.attachControl(canvas, false);
-new BabylonHemisphericLight("light", new BabylonVector3(2, 3, 3), scene);
-new BabylonHemisphericLight("light", new BabylonVector3(2, 3, -3), scene);
+new BabylonHemisphericLight("light", new Babylon.Vector3(2, 3, 3), scene);
+new BabylonHemisphericLight("light", new Babylon.Vector3(2, 3, -3), scene);
 engine.runRenderLoop(() => scene.render());
 </code>
 </pre>
@@ -211,14 +211,14 @@ engine.runRenderLoop(() => scene.render());
 
 <pre>
 <code class="language-javascript">
-const material = new BabylonStandardMaterial("std", scene);
-material.diffuseColor = BabylonColor3.FromHexString(color);
-const mesh = BabylonMeshBuilder.CreateBox("box", {
+const material = new Babylon.StandardMaterial("std", scene);
+material.diffuseColor = Babylon.Color3.FromHexString(color);
+const card = Babylon.MeshBuilder.CreateBox("box", {
     width,
     height,
     depth,
 });
-mesh.material = material;
+card.material = material;
 </code>
 </pre>
 
