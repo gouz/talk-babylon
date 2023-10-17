@@ -18,7 +18,7 @@ CSG ou Géométrie de construction de solides
 
 !image(assets/maths/Boolean_intersect.png)
 
-## Des p'tits trous, toujours des p'tits trous
+## Des p'tits trous, toujours des p'tits trous .[maths]
 
 <pre>
 <code class="language-javascript">
