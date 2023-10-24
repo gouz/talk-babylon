@@ -30,8 +30,8 @@ const hole = Babylon.MeshBuilder.CreateBox("box", {
 hole.position.x = x;
 hole.position.y = y;
 hole.position.z = z;
-const CSG1 = BabylonCSG.FromMesh(card);
-const CSG2 = BabylonCSG.FromMesh(hole);
+const CSG1 = Babylon.CSG.FromMesh(card);
+const CSG2 = Babylon.CSG.FromMesh(hole);
 const pipeCSG = CSG1.subtract(CSG2);
 pipeCSG.toMesh("merged", card.material, scene);
 </code>

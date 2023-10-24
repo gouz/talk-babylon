@@ -50,8 +50,13 @@ G28 ;Home
 </pre>
 
 /*
+M pour Marlin
+
 M140 : temperature du bed
 M104 : temperature de la buse
+M105 : récupération des températures
+M190 : attente de l'objectif
+M109 : attente de l'objectif
 */
 
 ## Impression .[print3D]

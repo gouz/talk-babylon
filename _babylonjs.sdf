@@ -162,11 +162,14 @@ Forme géométrique décomposée en triangle
 /*
 sommet // vertex
 Position (généralement dans l'espace 3D) accompagnée d'autres informations telles que la couleur, le vecteur normal et les coordonnées de texture.
+
 arête // edge
 Connexion entre deux sommets.
+
 face
 Un ensemble fermé d'arêtes.
 Un polygone est un ensemble coplanaire de faces.
+
 surfaces
 Plus souvent appelées groupes de lissage.
 */
