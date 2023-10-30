@@ -1,6 +1,6 @@
 ## Babylon.js
 
-!image(./assets/babylonjs/babylonjs.png | height="40%")
+!image(./assets/babylonjs/babylonjs.png,logo babylonjs,, 40)
 
 ## Historique .[babylon]
 
@@ -10,7 +10,7 @@
 OpenGL en 1992 par Silicon Graphics
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/babylonjs/OpenGL_logo.svg.png | width="200px")
+!image(assets/babylonjs/OpenGL_logo.svg.png, opengl, , 10)
 </td>
 </tr>
 <tr>
@@ -18,7 +18,7 @@ OpenGL en 1992 par Silicon Graphics
 Concurrence avec DirectX
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/babylonjs/Microsoft-DirectX-Logo-wordmark.svg | width="200px")
+!image(assets/babylonjs/Microsoft-DirectX-Logo-wordmark.svg, directx, , 10)
 </td>
 </tr>
 <tr>
@@ -26,7 +26,7 @@ Concurrence avec DirectX
 Vulkan en 2016
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/babylonjs/Vulkan.svg | width="200px")
+!image(assets/babylonjs/Vulkan.svg, vulkan, , 10)
 </td>
 </tr>
 </table>
@@ -48,7 +48,7 @@ DirectX, que sur windows, depuis 2020, une promesse de passer sur linux (wsl)
 Three.js depuis 2010
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/babylonjs/Threejs.svg | width="100px")
+!image(assets/babylonjs/Threejs.svg,, 10)
 </td>
 </tr>
 <tr>
@@ -56,7 +56,7 @@ Three.js depuis 2010
 WebGL depuis 2011
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/babylonjs/WebGL_Logo.svg | width="100px")
+!image(assets/babylonjs/WebGL_Logo.svg,, 10)
 </td>
 </tr>
 <tr>
@@ -64,7 +64,7 @@ WebGL depuis 2011
 Babylon.js depuis 2015
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/babylonjs/babylonjs.png | width="100px")
+!image(assets/babylonjs/babylonjs.png,, 10)
 </td>
 </tr>
 </table>
@@ -147,17 +147,17 @@ Forme géométrique décomposée en triangle
 <table>
 <tr>
 <td>
-!image(assets/babylonjs/Final-Fnatasy-VII-Cloud-ps1.jpg | height="400px")
+!image(assets/babylonjs/Final-Fnatasy-VII-Cloud-ps1.jpg,,, 40)
 </td>
 <td>
-!image(assets/babylonjs/Parallax164-Mario-mesh.png | height="400px")
+!image(assets/babylonjs/Parallax164-Mario-mesh.png,,, 40)
 </td>
 </tr>
 </table>
 
 ## Les composantes d'un "mesh" .[babylon]
 
-!image(assets/babylonjs/Mesh_overview.svg | style="background: white" width="1000px")
+!image(assets/babylonjs/Mesh_overview.svg,, 100,, background: white;)
 
 /*
 sommet // vertex
