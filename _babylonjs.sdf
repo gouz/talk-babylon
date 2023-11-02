@@ -90,7 +90,7 @@ const geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
 </pre>
 <pre>
 <code class="language-javascript">
-const material = new THREE.MeshBasicMaterial( {color: 0xffff00} ); 
+const material = new THREE.MeshBasicMaterial( {color: 0xffffff} ); 
 </code>
 </pre>
 <pre>
@@ -113,7 +113,7 @@ radiusTop : Float, radiusBottom : Float, height : Float, radialSegments : Intege
 <pre>
 <code class="language-javascript">
 const myMaterial = new BABYLON.StandardMaterial( "myMaterial", scene );
-myMaterial.diffuseColor = BABYLON.BabylonColor3.FromHexString( "#ffff00" );
+myMaterial.diffuseColor = BABYLON.BabylonColor3.FromHexString( "#ffffff" );
 </code>
 </pre>
 <pre>
@@ -122,8 +122,8 @@ const cylinder = BABYLON.MeshBuilder.CreateCylinder(
     "cylinder", 
     {
         height: 20, 
-        diameterTop: 2.5, 
-        diameterBottom: 2.5, 
+        diameterTop: 10, 
+        diameterBottom: 10, 
         subdivisions: 32
     }, 
     scene
@@ -161,7 +161,7 @@ Forme géométrique décomposée en triangle
 
 /*
 sommet // vertex
-Position (généralement dans l'espace 3D) accompagnée d'autres informations telles que la couleur, le vecteur normal et les coordonnées de texture.
+Position (généralement dans l'espace 3D) accompagnée d'autres informations (couleur, textures, ...)
 
 arête // edge
 Connexion entre deux sommets.
