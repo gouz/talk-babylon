@@ -1,16 +1,16 @@
 @font-face {
   font-family: "Lato";
-  src: local("Lato"), url("Lato-Regular.ttf") format("truetype");
+  src: local("Lato"), url("fonts/Lato-Regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "LatoItalic";
-  src: local("Lato-Italic"), url("Lato-Italic.ttf") format("truetype");
+  src: local("Lato-Italic"), url("fonts/Lato-Italic.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "LatoBold";
-  src: local("Lato-Bold"), url("Lato-Bold.ttf") format("truetype");
+  src: local("Lato-Bold"), url("fonts/Lato-Bold.ttf") format("truetype");
 }
 
 :root {
@@ -47,14 +47,14 @@ li {
 }
 
 .sd-app .cover {
-  background-image: url(./zane-lee-nRiRAGqnpl0-unsplash.jpg);
+  background-image: url(backgrounds/zane-lee-nRiRAGqnpl0-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .sd-app .kody {
   background-color: #4f5050;
-  background-image: url(./kody/kody.png);
+  background-image: url(images/kody/kody.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 10%;
@@ -65,26 +65,32 @@ li {
 }
 
 .sd-app .babylon {
-  background-image: url(./babylonjs/babylonjs.png);
+  background-image: url(images/babylonjs/babylonjs.png);
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 10%;
 }
 
 .sd-app .print3D {
-  background-image: url(./cr6.avif);
+  background-image: url(backgrounds/cr6.avif);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .sd-app .maths {
-  background-image: url(./thomas-t-OPpCbAAKWv8-unsplash.jpg);
+  background-image: url(backgrounds/thomas-t-OPpCbAAKWv8-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .sd-app .cura {
-  background-image: url(./cura.png);
+  background-image: url(backgrounds/cura.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.sd-app .mesh {
+  background-image: url(backgrounds/d-koi-COFXWa6LJdw-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -92,7 +98,8 @@ li {
 .sd-app .cover::before,
 .sd-app .print3D::before,
 .sd-app .maths::before,
-.sd-app .cura::before {
+.sd-app .cura::before,
+.sd-app .mesh::before {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -113,4 +120,5 @@ li {
 
 .sd-slide pre code {
   height: 100%;
+  font-size: 1.5vw;
 }

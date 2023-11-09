@@ -8,15 +8,15 @@ CSG ou Géométrie de construction de solides
 
 ## Union ou Addition .[maths]
 
-!image(assets/maths/Boolean_union.png)
+!image(assets/images/maths/Boolean_union.png)
 
 ## Différence ou Soustraction .[maths]
 
-!image(assets/maths/Boolean_difference.png)
+!image(assets/images/maths/Boolean_difference.png)
 
 ## Intersection .[maths]
 
-!image(assets/maths/Boolean_intersect.png)
+!image(assets/images/maths/Boolean_intersect.png)
 
 ## Des p'tits trous, toujours des p'tits trous .[maths]
 
@@ -34,5 +34,18 @@ const CSG1 = Babylon.CSG.FromMesh(card);
 const CSG2 = Babylon.CSG.FromMesh(hole);
 const pipeCSG = CSG1.subtract(CSG2);
 pipeCSG.toMesh("merged", card.material, scene);
+</code>
+</pre>
+
+## Cool ma carte est prête, je génère un STL ? .[babylon]
+
+<pre>
+<code class="language-javascript">
+const rawMeshes = scene.meshes;
+let exportFile = BABYLON.STLExport.CreateSTL(
+	rawMeshes,    // list defines the mesh to serialize
+	true,         // triggers the automatic download of the file.
+	"stl-export"  // changes the downloads fileName
+);
 </code>
 </pre>

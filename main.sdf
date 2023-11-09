@@ -8,32 +8,36 @@ custom_css: assets/custom.css
 
 __Promenons-nous dans les jardins de Babylon.js__
 
-!include(_introduction.sdf)
+!include(slides/_introduction.sdf)
 
 //@ < 02:00
 
-!include(_kody.sdf)
+!include(slides/_kody.sdf)
 
-//@ < 07:00
+//@ < 10:00
 
-!include(_babylonjs.sdf)
+!include(slides/_impression3D.sdf)
 
-!include(_csg.sdf)
+//@ < 17:00
+
+!include(slides/_stl.sdf)
+
+!include(slides/_mesh.sdf)
 
 //@ < 22:00
 
-!include(_impression3D.sdf)
+!include(slides/_babylonjs.sdf)
 
 //@ < 32:00
 
-!include(_js3D.sdf)
+!include(slides/_csg.sdf)
 
-//@ < 35:00
-
-!include(_conclusion.sdf)
+!include(slides/_conclusion.sdf)
 
 ## 🫶 .[cover]
 
 !image(assets/feedbacks.png,openfeedback, 25)
 
 des questions ?
+
+https://kody-deck.fr

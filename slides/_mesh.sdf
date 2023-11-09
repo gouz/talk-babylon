@@ -1,0 +1,46 @@
+## Qu'est-ce qu'un Mesh ? .[mesh]
+
+"Maillage"
+
+Forme géométrique décomposée en triangle
+
+<table>
+<tr>
+<td>
+!image(assets/images/babylonjs/Final-Fnatasy-VII-Cloud-ps1.jpg,,, 40)
+</td>
+<td>
+!image(assets/images/babylonjs/Parallax164-Mario-mesh.png,,, 40)
+</td>
+</tr>
+</table>
+
+## Les composantes d'un "mesh" .[mesh]
+
+!image(assets/images/babylonjs/Mesh_overview.svg,, 80,, background: white;)
+
+<small>
+__Rchoetzlein at English Wikipedia__
+</small>
+
+/*
+sommet // vertex
+Position (généralement dans l'espace 3D) accompagnée d'autres informations (couleur, textures, ...)
+
+arête // edge
+Connexion entre deux sommets.
+
+face
+Un ensemble fermé d'arêtes.
+
+surfaces
+Plus souvent appelées groupes de lissage.
+*/
+
+## Comment je fais des objets en 3D ? .[mesh]
+
+Logiciels ?
+
+OpenSCAD ?
+
+Autres solutions ?

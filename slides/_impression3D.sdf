@@ -2,17 +2,16 @@
 
 ## PLA(+), TPU, PETG, ABS, ... .[print3D]
 
-!image(assets/print/PLA.gif)
+!image(assets/images/print/PLA.gif)
 
 /*
 Expliquer les différences entre les matières
 
-Choix pour FDM car ...
 */
 
 ## SLA .[print3D]
 
-!image(assets/print/SLA.gif)
+!image(assets/images/print/SLA.gif)
 
 /*
 stéréolithographique
@@ -22,7 +21,14 @@ stéréolithographique
 
 Métal, béton, ...
 
-!image(assets/print/cement.gif)
+!image(assets/images/print/cement.gif)
+
+## Choix : PLA .[print3D steps]
+
+- Peu nocif pour les enfants
+- Résistance mécanique
+- Palette de couleur, adaptée aux daltoniens
+- Coût de production
 
 ## GCode .[print3D]
 

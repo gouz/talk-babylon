@@ -18,18 +18,4 @@ Un site https://kody-deck.fr est en cours de création pour expliquer le projet 
 
 Ce projet est en cours de conception, un poc a été fait.
 
-Le code est accessible sur https://gitlab.com/gouz/kody
-
-Le plan est :
-
-- Origines : Kody
-- BabylonJS
-  - Scene
-  - Engine Conception 3D
-  - Mesh Constructive Solid Geometry
-- Comment fonctionne une imprimante 3D ?
-  - Diverses technologies
-  - GCode
-- Javascript vers GCode
-  - STL
-  - Slicer
+Le code est accessible sur https://github.com/gouz/kody-deck.fr

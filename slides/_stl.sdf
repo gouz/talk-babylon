@@ -1,5 +1,8 @@
 ## STL, c'est pas des sous-titres ? .[cura]
 
+/*
+stéréolithographie
+*/
 
 ## text.stl .[cura]
 
@@ -25,15 +28,11 @@ endsolid
 </code>
 </pre>
 
-## Un peu de JS ? .[cura]
 
-<pre>
-<code class="language-javascript">
-const rawMeshes = scene.meshes;
-let exportFile = BABYLON.STLExport.CreateSTL(
-	rawMeshes,    // list defines the mesh to serialize
-	true,         // triggers the automatic download of the file.
-	"stl-export"  // changes the downloads fileName
-);
-</code>
-</pre>
+## Slicers .[cura]
+
+/*
+
+Comment on passe d'un STL au GCODE ?
+
+*/
