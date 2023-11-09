@@ -1,3 +1,11 @@
+## Slicers .[cura]
+
+/*
+
+Comment on passe d'un STL au GCODE ?
+
+*/
+
 ## STL, c'est pas des sous-titres ? .[cura]
 
 /*
@@ -27,12 +35,3 @@ solid merged
 endsolid
 </code>
 </pre>
-
-
-## Slicers .[cura]
-
-/*
-
-Comment on passe d'un STL au GCODE ?
-
-*/
