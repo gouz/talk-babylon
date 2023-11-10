@@ -32,7 +32,7 @@ Vulkan en 2016
 </table>
 
 /*
-Des jeux comme Quake, Half-life 2, Red Dead Redemption 2, ...
+Des jeux comme Quake, Half-life 2, Red Dead Redemption 2, Unreal Tournament, ...
 Cross plateform
 */
 
@@ -163,16 +163,19 @@ const camera = new Babylon.ArcRotateCamera(
     -Math.PI / 2,
     Math.PI / 2.5,
     3,
-    new Babylon.Vector3(0, 0, -250),
+    Babylon.Vector3.Zero(),
     scene
 );
-camera.setTarget(Babylon.Vector3.Zero());
 camera.attachControl(canvas, false);
 new BabylonHemisphericLight("light", new Babylon.Vector3(2, 3, 3), scene);
 new BabylonHemisphericLight("light", new Babylon.Vector3(2, 3, -3), scene);
 engine.runRenderLoop(() => scene.render());
 </code>
 </pre>
+
+/*
+Camera : name, alpha (rotation longitude), beta (rotation latitude), radius (distance de la cible), cible
+*/
 
 ## Construisons une "carte" de Kody .[babylon]
 
