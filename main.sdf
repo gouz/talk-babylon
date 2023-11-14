@@ -8,27 +8,31 @@ custom_css: assets/custom.css
 
 __Promenons-nous dans les jardins de Babylon.js__
 
+/*
+Talk de Corentin et Sébastien
+*/
+
 !include(slides/_introduction.sdf)
 
-//@ < 02:00
+//@ < 04:00
 
 !include(slides/_kody.sdf)
 
-//@ < 10:00
+//@ < 12:00
 
 !include(slides/_impression3D.sdf)
 
-//@ < 17:00
+//@ < 19:00
 
 !include(slides/_stl.sdf)
 
 !include(slides/_mesh.sdf)
 
-//@ < 22:00
+//@ < 25:00
 
 !include(slides/_babylonjs.sdf)
 
-//@ < 32:00
+//@ < 35:00
 
 !include(slides/_csg.sdf)
 
