@@ -50,6 +50,12 @@ Three.js depuis 2010
 <td style="background: white; padding: 20px">
 !image(assets/images/babylonjs/Threejs.svg,, 10)
 </td>
+<td style="padding: 20px">
+Babylon.js depuis 2015
+</td>
+<td style="background: white; padding: 20px">
+!image(assets/images/babylonjs/babylonjs.png,, 10)
+</td>
 </tr>
 <tr>
 <td style="padding: 20px">
@@ -58,13 +64,11 @@ WebGL depuis 2011
 <td style="background: white; padding: 20px">
 !image(assets/images/babylonjs/WebGL_Logo.svg,, 10)
 </td>
-</tr>
-<tr>
 <td style="padding: 20px">
-Babylon.js depuis 2015
+WebGPU depuis 2023
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/babylonjs.png,, 10)
+!image(assets/images/babylonjs/webgpu.png,, 10)
 </td>
 </tr>
 </table>
