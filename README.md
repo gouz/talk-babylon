@@ -19,3 +19,5 @@ Un site https://kody-deck.fr est en cours de création pour expliquer le projet 
 Ce projet est en cours de conception, un poc a été fait.
 
 Le code est accessible sur https://github.com/gouz/kody-deck.fr
+
+Ce talk a été donné au DevFest Toulouse : https://www.youtube.com/live/Zgt1ghc-QZE?si=tpjDENDJD4O0sBqS
