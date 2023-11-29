@@ -1,6 +1,6 @@
 ## Babylon.js
 
-!image(assets/images/babylonjs/babylonjs.png,logo babylonjs,, 40)
+!image(assets/images/babylonjs/babylonjs.png,logo babylonjs,, 400)
 
 ## Historique .[babylon]
 
@@ -10,7 +10,7 @@
 OpenGL en 1992 par Silicon Graphics
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/OpenGL_logo.svg.png, opengl, , 10)
+!image(assets/images/babylonjs/OpenGL_logo.svg.png, opengl, , 150)
 </td>
 </tr>
 <tr>
@@ -18,7 +18,7 @@ OpenGL en 1992 par Silicon Graphics
 Concurrence avec DirectX
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/Microsoft-DirectX-Logo-wordmark.svg, directx, , 10)
+!image(assets/images/babylonjs/Microsoft-DirectX-Logo-wordmark.svg, directx, , 150)
 </td>
 </tr>
 <tr>
@@ -26,7 +26,7 @@ Concurrence avec DirectX
 Vulkan en 2016
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/Vulkan.svg, vulkan, , 10)
+!image(assets/images/babylonjs/Vulkan.svg, vulkan, , 150)
 </td>
 </tr>
 </table>
@@ -48,13 +48,13 @@ DirectX, que sur windows, depuis 2020, une promesse de passer sur linux (wsl)
 Three.js depuis 2010
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/Threejs.svg,, 10)
+!image(assets/images/babylonjs/Threejs.svg,, 200)
 </td>
 <td style="padding: 20px">
 Babylon.js depuis 2015
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/babylonjs.png,, 10)
+!image(assets/images/babylonjs/babylonjs.png,, 200)
 </td>
 </tr>
 <tr>
@@ -62,13 +62,13 @@ Babylon.js depuis 2015
 WebGL depuis 2011
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/WebGL_Logo.svg,, 10)
+!image(assets/images/babylonjs/WebGL_Logo.svg,, 200)
 </td>
 <td style="padding: 20px">
 WebGPU depuis 2023
 </td>
 <td style="background: white; padding: 20px">
-!image(assets/images/babylonjs/webgpu.png,, 10)
+!image(assets/images/babylonjs/webgpu.png,, 200)
 </td>
 </tr>
 </table>

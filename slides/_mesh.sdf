@@ -7,17 +7,17 @@ Forme géométrique décomposée en triangle
 <table>
 <tr>
 <td>
-!image(assets/images/babylonjs/Final-Fnatasy-VII-Cloud-ps1.jpg,,, 40)
+!image(assets/images/babylonjs/Final-Fnatasy-VII-Cloud-ps1.jpg,,, 400)
 </td>
 <td>
-!image(assets/images/babylonjs/Parallax164-Mario-mesh.png,,, 40)
+!image(assets/images/babylonjs/Parallax164-Mario-mesh.png,,, 400)
 </td>
 </tr>
 </table>
 
 ## Les composantes d'un "mesh" .[mesh]
 
-!image(assets/images/babylonjs/Mesh_overview.svg,, 80,, background: white;)
+!image(assets/images/babylonjs/Mesh_overview.svg,, 900,, background: white;)
 
 <small>
 __Rchoetzlein at English Wikipedia__
