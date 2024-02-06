@@ -8,9 +8,7 @@ custom_css: assets/custom.css
 
 __Promenons-nous dans les jardins de Babylon.js__
 
-/*
-Talk de Corentin et Sébastien
-*/
+!image(assets/TNT.png,tnt, 200)
 
 !include(slides/_introduction.sdf)
 
