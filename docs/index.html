@@ -1,0 +1,159 @@
+<!doctype html><html><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><link rel="shortcut icon" href=./favicon.svg sizes=any type=image/svg+xml><title>De JavaScript à l'impression 3D</title><link rel=stylesheet href=slidesk.css><link href=./plugins/steps/steps.css rel=stylesheet><link href=./plugins/highlightjs/default.min.css rel=stylesheet><link rel=stylesheet href=assets/custom.css></head><body class=sd-app><section class="sd-slide cover" data-num=0 data-slug=""><h1>De JavaScript à l'impression 3D</h1><p><span class=i>Promenons-nous dans les jardins de Babylon.js</span></p><p></p><div class=sd-img><img src=assets/TNT.png loading=lazy alt=tnt width=200></div><p></p></section><section class="sd-slide cover" data-num=1 data-slug=pourquoi-ce-talk-><h2>Pourquoi ce talk ?</h2><p>Plusieurs passions : Maker / Dev</p><p>Inspiré par <span class=b>@aurelievache</span>, <span class=b>@titimoby</span></p><aside class=sd-notes>Papa<br></aside></section><section class="sd-slide cover" data-num=2 data-slug=!slide-2><p>Sylvain "gouz" Gougouzian</p><p>Consultant Dev Senior</p><p></p><div class=sd-img><img src=assets/images/zenika.svg loading=lazy alt=zenika height=100></div><p></p><p>Clermont-Ferrand</p><p><span class=b><a href=https://gouz.dev target=_blank rel=noopener>https://gouz.dev</a></span></p></section><section class="sd-slide kody" data-num=3 data-slug=kody><h2>Kody</h2><p>Projet éducatif Open-Source</p><p>Apprentissage de la logique / algo aux enfants</p><p>Livre dont vous êtes le héros</p><aside class=sd-notes>J'y connais rien en conception 3D<br><br>Lidrea<br><br>Expliquer le fonctionnement<br><br>Automatisation<br><br>JSON vers trous<br><br></aside></section><section class="sd-slide kody" data-num=4 data-slug=httpskody-deckfr><h2><a href=https://kody-deck.fr target=_blank rel=noopener>https://kody-deck.fr</a></h2><iframe src=http://localhost:5173/ width=1500 height=800></iframe><aside class=sd-notes><br>Conçu avec babylon<br><br></aside></section><section class="sd-slide kody" data-num=5 data-slug=si-a-vous-intresse-><h2>Si ça vous intéresse ;)</h2><p></p><div class=sd-img><img src=assets/images/kody/qrkody.png loading=lazy alt="" height=400></div><p></p></section><section class="sd-slide print3D" data-num=6 data-slug=ctrlp-mais-en-3d><h2>CTRL+P mais en 3D</h2></section><section class="sd-slide print3D" data-num=7 data-slug=pla-tpu-petg-abs-><h2>PLA(+), TPU, PETG, ABS, ...</h2><p></p><div class=sd-img><img src=assets/images/print/PLA.gif loading=lazy alt="undefined"></div><p></p><aside class=sd-notes>Expliquer les différences entre les matières<br><br></aside></section><section class="sd-slide print3D" data-num=8 data-slug=sla><h2>SLA</h2><p></p><div class=sd-img><img src=assets/images/print/SLA.gif loading=lazy alt="undefined"></div><p></p></section><section class="sd-slide print3D" data-num=9 data-slug=autres><h2>Autres</h2><p>Métal, béton, ...</p><p></p><div class=sd-img><img src=assets/images/print/cement.gif loading=lazy alt=cement width=700></div><p></p></section><section class="sd-slide print3D steps" data-num=10 data-slug=choix-pla><h2>Choix : PLA</h2><ul><li>Peu nocif pour les enfants</li><li>Résistance mécanique</li><li>Palette de couleur, adaptée aux daltoniens</li><li>Coût de production</li></ul></section><section class="sd-slide print3D" data-num=11 data-slug=gcode><h2>GCode</h2><p>Dévelopé au début des années 60</p><p>ISO en 1980</p></section><section class="sd-slide print3D" data-num=12 data-slug=initialisation-de-la-machine><h2>Initialisation de la machine</h2><pre>
+<code class=language-gcode>
+M140 S60
+M105
+M190 S60
+M104 S200
+M105
+M109 S200
+M82 ;absolute extrusion mode
+M201 X500.00 Y500.00 Z100.00 E5000.00 ;Setup machine max acceleration
+M203 X500.00 Y500.00 Z10.00 E50.00 ;Setup machine max feedrate
+M204 P500.00 R1000.00 T500.00 ;Setup Print/Retract/Travel acceleration
+M205 X8.00 Y8.00 Z0.40 E5.00 ;Setup Jerk
+M220 S100 ;Reset Feedrate
+M221 S100 ;Reset Flowrate
+G28 ;Home
+</code>
+</pre><aside class=sd-notes>M pour Marlin<br><br>M140 : temperature du bed<br>M104 : temperature de la buse<br>M105 : récupération des températures<br>M190 : attente de l'objectif<br>M109 : attente de l'objectif<br></aside></section><section class="sd-slide print3D" data-num=13 data-slug=impression><h2>Impression</h2><pre>
+<code class=language-gcode>
+G92 E0 ;Reset Extruder
+G1 Z2.0 F3000 ;Move Z Axis up
+G1 X10.1 Y20 Z0.28 F5000.0 ;Move to start position
+G1 X10.1 Y200.0 Z0.28 F1500.0 E15 ;Draw the first line
+G1 X10.4 Y200.0 Z0.28 F5000.0 ;Move to side a little
+G1 X10.4 Y20 Z0.28 F1500.0 E30 ;Draw the second line
+G92 E0 ;Reset Extruder
+G1 Z2.0 F3000 ;Move Z Axis up
+</code>
+</pre><aside class=sd-notes>G1 – Linear Movement<br></aside></section><section class="sd-slide print3D" data-num=14 data-slug=finalisation><h2>Finalisation</h2><pre>
+<code class=language-gcode>
+G91 ;Relative positioning
+G1 E-2 F2700 ;Retract a bit
+G1 E-2 Z0.2 F2400 ;Retract and raise Z
+G1 X5 Y5 F3000 ;Wipe out
+G1 Z10 ;Raise Z more
+G90 ;Absolute positioning
+G1 X0 Y235 ;Present print
+M106 S0 ;Turn-off fan
+M104 S0 ;Turn-off hotend
+M140 S0 ;Turn-off bed
+M84 X Y E ;Disable all steppers but Z
+M82 ;absolute extrusion mode
+</code>
+</pre></section><section class="sd-slide cura" data-num=15 data-slug=slicers><h2>Slicers</h2><aside class=sd-notes><br>Comment on génère du GCODE depuis un objet 3D ?<br><br></aside></section><section class="sd-slide cura" data-num=16 data-slug=stl-cest-pas-des-sous-titres-><h2>STL, c'est pas des sous-titres ?</h2><aside class=sd-notes>stéréolithographie<br></aside></section><section class="sd-slide cura" data-num=17 data-slug=textstl><h2>text.stl</h2><pre>
+<code>
+solid merged
+	facet normal 0 1 0
+		outer loop
+			vertex 28.999999995343387 1.8000000572204589 -40.507936501432035
+			vertex 31.5 1.8000000572204589 -44
+			vertex 28.999999995343387 1.8000000572204589 -44
+		endloop
+	endfacet
+	facet normal 0 1 0
+		outer loop
+			vertex 28.999999995343387 1.8000000572204589 -39.92592591833738
+			vertex 31.5 1.8000000572204589 -44
+			vertex 28.999999995343387 1.8000000572204589 -40.507936501432035
+		endloop
+	endfacet
+	...
+endsolid
+</code>
+</pre></section><section class="sd-slide mesh" data-num=18 data-slug=quest-ce-quun-mesh-><h2>Qu'est-ce qu'un Mesh ?</h2><p>"Maillage"</p><p>Forme géométrique décomposée en triangle</p><table><tr><td><div class=sd-img><img src=assets/images/babylonjs/Final-Fnatasy-VII-Cloud-ps1.jpg loading=lazy alt="" height=400></div></td><td><div class=sd-img><img src=assets/images/babylonjs/Parallax164-Mario-mesh.png loading=lazy alt="" height=400></div></td></tr></table></section><section class="sd-slide mesh" data-num=19 data-slug=les-composantes-dun-mesh><h2>Les composantes d'un "mesh"</h2><p></p><div class=sd-img style=background:#fff><img src=assets/images/babylonjs/Mesh_overview.svg loading=lazy alt="" width=900></div><p></p><small><span class=i>Rchoetzlein at English Wikipedia</span></small><aside class=sd-notes>sommet // vertex<br>Position (généralement dans l'espace 3D) accompagnée d'autres informations (couleur, textures, ...)<br><br>arête // edge<br>Connexion entre deux sommets.<br><br>face<br>Un ensemble fermé d'arêtes.<br><br>surfaces<br>Plus souvent appelées groupes de lissage.<br></aside></section><section class="sd-slide mesh" data-num=20 data-slug=comment-je-fais-des-objets-en-3d-><h2>Comment je fais des objets en 3D ?</h2><p>Logiciels ?</p><p>OpenSCAD ?</p><p>Autres solutions ?</p></section><section class=sd-slide data-num=21 data-slug=babylonjs><h2>Babylon.js</h2><p></p><div class=sd-img><img src=assets/images/babylonjs/babylonjs.png loading=lazy alt="logo babylonjs" height=400></div><p></p></section><section class="sd-slide babylon" data-num=22 data-slug=historique><h2>Historique</h2><table style=margin-top:40px><tr><td style=padding:20px>OpenGL en 1992 par Silicon Graphics</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/OpenGL_logo.svg.png loading=lazy alt=opengl height=150></div></td></tr><tr><td style=padding:20px>Concurrence avec DirectX</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/Microsoft-DirectX-Logo-wordmark.svg loading=lazy alt=directx height=150></div></td></tr><tr><td style=padding:20px>Vulkan en 2016</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/Vulkan.svg loading=lazy alt=vulkan height=150></div></td></tr></table><aside class=sd-notes>Des jeux comme Quake, Half-life 2, Red Dead Redemption 2, Unreal Tournament, ...<br>Cross plateform<br></aside><aside class=sd-notes>DirectX, que sur windows, depuis 2020, une promesse de passer sur linux (wsl)<br></aside></section><section class="sd-slide babylon" data-num=23 data-slug=moteurs-3d-web><h2>Moteurs 3D web</h2><table style=margin-top:40px><tr><td style=padding:20px>Three.js depuis 2010</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/Threejs.svg loading=lazy alt="" width=200></div></td><td style=padding:20px>Babylon.js depuis 2015</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/babylonjs.png loading=lazy alt="" width=200></div></td></tr><tr><td style=padding:20px>WebGL depuis 2011</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/WebGL_Logo.svg loading=lazy alt="" width=200></div></td><td style=padding:20px>WebGPU depuis 2023</td><td style=background:#fff;padding:20px><div class=sd-img><img src=assets/images/babylonjs/webgpu.png loading=lazy alt="" width=200></div></td></tr></table></section><section class="sd-slide babylon" data-num=24 data-slug=principal-concurrent-threejs><h2>Principal concurrent : Three.js</h2><p>5 ans d'expériences de plus</p><p>Poussé depuis 2020 par <span class=code>react-three-fiber</span></p></section><section class="sd-slide babylon" data-num=25 data-slug=threejs-vs-babylonjs><h2>Three.js vs Babylon.js</h2><p>Comment fait-on un cylindre ?</p><p></p><div class=sd-img><img src=assets/images/babylonjs/cylinder.png loading=lazy alt="undefined"></div><p></p></section><section class="sd-slide babylon" data-num=26 data-slug=cylinderthreejs><h2>cylinder.three.js</h2><pre>
+<code class=language-javascript>
+const geometry = new THREE.CylinderGeometry( 5, 5, 20, 32 );
+</code>
+</pre><pre>
+<code class=language-javascript>
+const material = new THREE.MeshBasicMaterial( {color: 0xffffff} ); 
+</code>
+</pre><pre>
+<code class=language-javascript>
+const cylinder = new THREE.Mesh( geometry, material );
+</code>
+</pre><pre>
+<code class=language-javascript>
+scene.add( cylinder );
+</code>
+</pre><aside class=sd-notes>radiusTop : Float, radiusBottom : Float, height : Float, radialSegments : Integer<br></aside></section><section class="sd-slide babylon" data-num=27 data-slug=cylinderbabylonjs><h2>cylinder.babylon.js</h2><pre>
+<code class=language-javascript>
+const myMaterial = new BABYLON.StandardMaterial( "myMaterial", scene );
+myMaterial.diffuseColor = BABYLON.BabylonColor3.FromHexString( "#ffffff" );
+</code>
+</pre><pre>
+<code class=language-javascript>
+const cylinder = BABYLON.MeshBuilder.CreateCylinder(
+    "cylinder", 
+    {
+        height: 20, 
+        diameterTop: 10, 
+        diameterBottom: 10, 
+        subdivisions: 32
+    }, 
+    scene
+);
+cylinder.material = myMaterial;
+</code>
+</pre></section><section class="sd-slide babylon" data-num=28 data-slug=avantages-de-babylonjs><h2>Avantages de Babylon.js</h2><p>Code lisible</p><p>TypeScript</p></section><section class="sd-slide babylon" data-num=29 data-slug=passons-la-pratique><h2>Passons à la pratique</h2></section><section class="sd-slide babylon" data-num=30 data-slug=on-cre-une-scne><h2>On crée une scène</h2><pre>
+<code class=language-javascript>
+const canvas = document.getElementById(canvasId);
+const engine = new Babylon.Engine(canvas, true, {
+    preserveDrawingBuffer: true,
+    stencil: true,
+});
+const scene = new Babylon.Scene(engine);
+scene.clearColor = Babylon.Color3.FromHexString("#9fc9dc");
+</code>
+</pre></section><section class="sd-slide babylon" data-num=31 data-slug=on-ajoute-camra-lumire-><h2>On ajoute caméra, lumière, ...</h2><pre>
+<code>
+const camera = new Babylon.ArcRotateCamera(
+    "camera",
+    -Math.PI / 2,
+    Math.PI / 2.5,
+    3,
+    Babylon.Vector3.Zero(),
+    scene
+);
+camera.attachControl(canvas, false);
+new BabylonHemisphericLight("light", new Babylon.Vector3(2, 3, 3), scene);
+new BabylonHemisphericLight("light", new Babylon.Vector3(2, 3, -3), scene);
+engine.runRenderLoop(() => scene.render());
+</code>
+</pre><aside class=sd-notes>Camera : name, alpha (rotation longitude), beta (rotation latitude), radius (distance de la cible), cible<br></aside></section><section class="sd-slide babylon" data-num=32 data-slug=construisons-une-carte-de-kody><h2>Construisons une "carte" de Kody</h2><pre>
+<code class=language-javascript>
+const material = new Babylon.StandardMaterial("std", scene);
+material.diffuseColor = Babylon.Color3.FromHexString(color);
+const card = Babylon.MeshBuilder.CreateBox("box", {
+    width,
+    height,
+    depth,
+});
+card.material = material;
+</code>
+</pre></section><section class="sd-slide babylon" data-num=33 data-slug=comment-je-fais-des-trous-><h2>Comment je fais des trous ???</h2></section><section class="sd-slide maths" data-num=34 data-slug=constructive-solid-geometry><h2>Constructive Solid Geometry</h2><aside class=sd-notes>CSG ou Géométrie de construction de solides<br></aside><p>3 opérations</p></section><section class="sd-slide maths" data-num=35 data-slug=union-ou-addition><h2>Union ou Addition</h2><p></p><div class=sd-img><img src=assets/images/maths/Boolean_union.png loading=lazy alt="undefined"></div><p></p></section><section class="sd-slide maths" data-num=36 data-slug=diffrence-ou-soustraction><h2>Différence ou Soustraction</h2><p></p><div class=sd-img><img src=assets/images/maths/Boolean_difference.png loading=lazy alt="undefined"></div><p></p></section><section class="sd-slide maths" data-num=37 data-slug=intersection><h2>Intersection</h2><p></p><div class=sd-img><img src=assets/images/maths/Boolean_intersect.png loading=lazy alt="undefined"></div><p></p></section><section class="sd-slide maths" data-num=38 data-slug=des-ptits-trous-toujours-des-ptits-trous><h2>Des p'tits trous, toujours des p'tits trous</h2><pre>
+<code class=language-javascript>
+const hole = Babylon.MeshBuilder.CreateBox("box", {
+    width,
+    height,
+    depth,
+});
+hole.position.x = x;
+hole.position.y = y;
+hole.position.z = z;
+const CSG1 = Babylon.CSG.FromMesh(card);
+const CSG2 = Babylon.CSG.FromMesh(hole);
+const pipeCSG = CSG1.subtract(CSG2);
+pipeCSG.toMesh("merged", card.material, scene);
+</code>
+</pre></section><section class="sd-slide babylon" data-num=39 data-slug=cool-ma-carte-est-prte-je-gnre-un-stl-><h2>Cool ma carte est prête, je génère un STL ?</h2><pre>
+<code class=language-javascript>
+const rawMeshes = scene.meshes;
+let exportFile = BABYLON.STLExport.CreateSTL(
+	rawMeshes,    // list defines the mesh to serialize
+	true,         // triggers the automatic download of the file.
+	"stl-export"  // changes the downloads fileName
+);
+</code>
+</pre></section><section class="sd-slide cover steps" data-num=40 data-slug=conclusion><h2>Conclusion</h2><p>Pourquoi BabylonJS ?</p><ul><li>Simplicité du code</li><li>CSG</li><li>ExportSTL</li></ul></section><section class="sd-slide cover" data-num=41 data-slug=!slide-41><h2>🫶</h2><p>des questions ?</p><p><a href=https://kody-deck.fr target=_blank rel=noopener>https://kody-deck.fr</a></p></section><script src=slidesk.js></script><script src=./plugins/steps/steps.js></script><script src=./plugins/highlightjs/highlight.min.js></script><script src=./plugins/highlightjs/plugin.js></script></body></html>
