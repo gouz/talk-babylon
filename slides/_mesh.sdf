@@ -15,6 +15,10 @@ Forme géométrique décomposée en triangle
 </tr>
 </table>
 
+/*
+Cloud
+*/
+
 ## Les composantes d'un "mesh" .[mesh]
 
 !image(assets/images/babylonjs/Mesh_overview.svg,, 900,, background: white;)
